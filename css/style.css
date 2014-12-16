@@ -116,7 +116,7 @@ p .small  {
 	position:relative;
 	float:left;
 	top:2.2em;
-	width:30%;
+	min-width:250px;
     border: none;
     border-radius: 0px;
     font-size: 10pt;
