@@ -1,9 +1,14 @@
 $(document).ready(function() {
 	var results = $('.results');	
-	$('.start').click(function(){
+	$('.start').on('click', function(){
+		results.text('');
 		var userInput = $('#usernumber').val();
 		if (userInput%1 != 0){
 			alert('Please enter an integer value. No decimals.')
+			$('#usernumber').val('');
+		}
+		else if (!$.isNumeric(userInput)){
+			alert('Please enter a numerical value.')
 			$('#usernumber').val('');
 		}
 		else {
